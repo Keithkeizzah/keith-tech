@@ -57,19 +57,19 @@ router.get('/', async (req, res) => {
                let session = await Pair_Code_By_Keith_King.sendMessage(Pair_Code__Keith_King.user.id, { text: '' + b64data });
 
                let KEITH_TECH_TEXT = `
-*_Pair Code for KEITH_TECH Connected_*
+*_Pair Code for ALPHA_TECH Connected_*
 *_Made With 🤍_*
-*By Ibrahim-tech*
+*By keith-tech*
 ______________________________________
 ╔════◇
-║ *『 IBRAHIM-TECH OFFICIAL 』*
+║ *『 ALPHA-TECH OFFICIAL 』*
 ║ _YOU HAVE SUCCESSFULLY SELECTED THE BEST BOT._
 ╚══════════════════════╝
 ╔═════◇
 ║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
 ║❒ *Ytube:* _https://youtube.com/@keithkeizzah?si=PviuOaZQHHvAjpxH_
 ║❒ *Owner:* _https://wa.me/qr/W6BT5CSV4NPNJ1_
-║❒ *Repo:* _https://github.com/Keithkeizzah/huncho_
+║❒ *Repo:* _https://github.com/Keithkeizzah/keith-tech-1_
 ║❒ *WaGroup:* _https://chat.whatsapp.com/KeEYrEX8UDdGD4m4GbdHaA_
 ║❒ *WaChannel:* _https://whatsapp.com/channel/0029Vaan9TF9Bb62l8wpoD47_
 ║❒ *Plugins:* _https://github.com/Keithkeizzah/huncho-plugins_
