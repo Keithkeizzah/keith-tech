@@ -6,7 +6,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-    default: Ibrahim_King,
+    default: _Keith_tech,
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
             saveCreds
         } = await useMultiFileAuthState('./temp/'+id)
      try {
-            let Pair_Code_By_Keith_King = France_King({
+            let Pair_Code_By_Keith_tech = France_King({
                 auth: {
                     creds: state.creds,
                     keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
@@ -43,8 +43,8 @@ router.get('/', async (req, res) => {
                  await res.send({code});
                      }
                  }
-            Pair_Code__Keith_King.ev.on('creds.update', saveCreds)
-            Pair_Code__Keith_King.ev.on("connection.update", async (s) => {
+            Pair_Code__Keith_tech.ev.on('creds.update', saveCreds)
+            Pair_Code__Keith_tech.ev.on("connection.update", async (s) => {
                 const {
                     connection,
                     lastDisconnect
@@ -54,7 +54,7 @@ router.get('/', async (req, res) => {
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 await delay(800);
                let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Keith_King.sendMessage(Pair_Code__Keith_King.user.id, { text: '' + b64data });
+               let session = await Pair_Code_By_Keith_tech.sendMessage(Pair_Code__Keith_tech.user.id, { text: '' + b64data });
 
                let KEITH_TECH_TEXT = `
 *_Pair Code for ALPHA_TECH Connected_*
@@ -76,11 +76,11 @@ ______________________________________
 ╚══════════════════════╝ 
 _____________________________________
 _Don't Forget To Give a Star To My Repo_`
- await Pair_Code_By_Keith_King.sendMessage(Pair_Code__Keith_King.user.id,{text:KEITH_TECH_TEXT},{quoted:session})
+ await Pair_Code_By_Keith_tech.sendMessage(Pair_Code__Keith_tech.user.id,{text:KEITH_TECH_TEXT},{quoted:session})
  
 
         await delay(100);
-        await Pair_Code_Keith_King.ws.close();
+        await Pair_Code_Keith_tech.ws.close();
         return await removeFile('./temp/'+id);
             } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
