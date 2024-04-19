@@ -68,7 +68,7 @@ ______________________________________
 ║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
 ║❒ *Ytube:* _https://youtube.com/@keithkeizzah?si=PviuOaZQHHvAjpxH_
 ║❒ *Owner:* _https://wa.me/message/NHCZC5DSOEUXB1_
-║❒ *Repo:* _https://github.com/Keithkeizzah/huncho_
+║❒ *Repo:* _https://github.com/Keithkeizzah/keith-tech-1_
 ║❒ *WaGroup:* _https://chat.whatsapp.com/KeEYrEX8UDdGD4m4GbdHaA_
 ║❒ *WaChannel:* _https://whatsapp.com/channel/0029Vaan9TF9Bb62l8wpoD47_
 ║❒ *Plugins:* _https://github.com/keithkeizzah/keith-bot-md-plugins_
