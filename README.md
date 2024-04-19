@@ -28,7 +28,7 @@ Now Deploy
 <a href='https://dashboard.heroku.com/new?template=https://github.com/Keithkeizzah/keith-tech' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=heroku&logoColor=white'/>
 # `Owner`
 
- <a href="https://github.com/Keithkeizzah"><img src="https://github.com/Keithtech.png" width="250" height="250" alt="Giftedmaurice"/></a>
+ <a href="https://github.com/Keithkeizzah"><img src="https://telegra.ph/file/7ca801fd42b4d77d7baef.jpg" width="250" height="250" alt="Giftedmaurice"/></a>
 
 # 
    
