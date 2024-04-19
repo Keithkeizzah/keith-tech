@@ -1,0 +1,22 @@
+{
+    "name": "IBRAHIM-TECH Pairing",
+    "description": "IBRAHIM-TECH WA bot, Created by France King",
+    "logo": "https://telegra.ph/file/06c29434ea71a8ce855a1.jpg",
+    "repository": "https://github.com/ibrahimaitech/Ibrahim-tech-pair",
+    "keywords": ["IBRAHIMTECH"],
+    "success_url": "/", 
+    "buildpacks": [{ "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" } ],
+    "env": {      
+      "PORT": {
+        "description": "Port for web app.4000,5000,3000... any!",
+        "value": "5000",
+        "required": false 
+      },
+      "MESSAGE": {
+        "description": "set session id conformation message",
+        "value": "",
+        "required": false 
+      }
+    }   
+
+}
