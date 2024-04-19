@@ -8,7 +8,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-	default: Ibrahim_Tech,
+	default: Keith_Tech,
 	useMultiFileAuthState,
 	jidNormalizedUser,
 	Browsers,
@@ -28,13 +28,13 @@ const {
 } = require("node:fs/promises")
 router.get('/', async (req, res) => {
 	const id = makeid();
-	async function IBRAHIM_TECH_QR_CODE() {
+	async function KEITH_TECH_QR_CODE() {
 		const {
 			state,
 			saveCreds
 		} = await useMultiFileAuthState('./temp/' + id)
 		try {
-			let Qr_Code_By_Ibrahim_Tech= Ibrahim_Tech({
+			let Qr_Code_By_Keith_Tech= Ibrahim_Tech({
 				auth: state,
 				printQRInTerminal: false,
 				logger: pino({
@@ -43,8 +43,8 @@ router.get('/', async (req, res) => {
 				browser: Browsers.macOS("Desktop"),
 			});
 
-			Qr_Code_By_Ibrahim_Tech.ev.on('creds.update', saveCreds)
-			Qr_Code_By_Ibrahim_Techr.ev.on("connection.update", async (s) => {
+			Qr_Code_By_Keith_Tech.ev.on('creds.update', saveCreds)
+			Qr_Code_By_Keith_Techr.ev.on("connection.update", async (s) => {
 				const {
 					connection,
 					lastDisconnect,
@@ -56,34 +56,34 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Ibrahim_King.sendMessage(Qr_Code_By_Ibrahim_King.user.id, { text: '' + b64data });
+				   let session = await Qr_Code_By_Keith_King.sendMessage(Qr_Code_By_Ibrahim_King.user.id, { text: '' + b64data });
 	
-				   let IBRAHIM_TECH_TEXT = `
-*_Qr Code By Ibrahim tech_*
+				   let KEITH_TECH_TEXT = `
+*_Qr Code By Keith tech_*
 *_Made With 🔱_*
 ______________________________________
 ╔════◇
-║ *『 IBRAHIM-TECH OFFICIAL 』*
+║ *『 KEITH-TECH OFFICIAL 』*
 ║ _YOU HAVE SUCCESSFULLY SELECTED THE BEST BOT._
 ╚══════════════════════╝
 ╔═════◇
 ║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ *Ytube:* _https://wa.me/message/74F2PC4JA4F3P1_
-║❒ *Owner:* _https://wa.me/message/74F2PC4JA4F3P1_
-║❒ *Repo:* _https://github.com/ibrahimaitech/IBRAHIM-AI-10.10/tree/main_
-║❒ *WaGroup:* _https://chat.whatsapp.com/L7T4iMvnfwCA8oLkUIRCFj_
-║❒ *WaChannel:* _https://chat.whatsapp.com/L7T4iMvnfwCA8oLkUIRCFj_
-║❒ *Plugins:* _https://github.com/Ibrahimaitech/Ibrahim-bot-md-plugins_
+║
+║❒ *Owner:* _https://wa.me/qr/W6BT5CSV4NPNJ1_
+║❒ *Repo:* _https://github.com/Keithkeizzah/huncho_
+║❒ *WaGroup:* _https://chat.whatsapp.com/KeEYrEX8UDdGD4m4GbdHaA_
+║❒ *WaChannel:* _https://whatsapp.com/channel/0029Vaan9TF9Bb62l8wpoD47_
+║❒ *Plugins:* _https://github.com/keithKeizzah/keith-md-plugins_
 ╚══════════════════════╝ 
 _____________________________________
 	
 _Don't Forget To Give Star To My Repo_`
-	 await Qr_Code_Ibrahim_King.sendMessage(Qr_Code__Ibrahim_King.user.id,{text:IBRAHIM_TECH_TEXT},{quoted:session})
+	 await Qr_Code_Keith_King.sendMessage(Qr_Code__Keith_King.user.id,{text:KEITH_TECH_TEXT},{quoted:session})
 
 
 
 					await delay(100);
-					await Qr_Code__Ibrahim_King.ws.close();
+					await Qr_Code__Keith_King.ws.close();
 					return await removeFile("temp/" + id);
 				} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
 					await delay(10000);
@@ -100,6 +100,6 @@ _Don't Forget To Give Star To My Repo_`
 			await removeFile("temp/" + id);
 		}
 	}
-	return await IBRAHIM_TECH_QR_CODE()
+	return await KEITH_TECH_QR_CODE()
 });
 module.exports = router
