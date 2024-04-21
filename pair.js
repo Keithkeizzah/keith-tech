@@ -1,62 +1,64 @@
 const PastebinAPI = require('pastebin-js'),
 pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
 const {makeid} = require('./id');
+const QRCode = require('qrcode');
 const express = require('express');
+const path = require('path');
 const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-    default: Keith_Tech,
-    useMultiFileAuthState,
-    delay,
-    makeCacheableSignalKeyStore,
-    Browsers
-} = require("maher-zubair-baileys");
+	default: Ibrahim_Tech,
+	useMultiFileAuthState,
+	jidNormalizedUser,
+	Browsers,
+	delay,
+	makeInMemoryStore,
+} = require("@whiskeysockets/baileys");
 
-function removeFile(FilePath){
-    if(!fs.existsSync(FilePath)) return false;
-    fs.rmSync(FilePath, { recursive: true, force: true })
- };
+function removeFile(FilePath) {
+	if (!fs.existsSync(FilePath)) return false;
+	fs.rmSync(FilePath, {
+		recursive: true,
+		force: true
+	})
+};
+const {
+	readFile
+} = require("node:fs/promises")
 router.get('/', async (req, res) => {
-    const id = makeid();
-    let num = req.query.number;
-        async function KEITH_MD_PAIR_CODE() {
-        const {
-            state,
-            saveCreds
-        } = await useMultiFileAuthState('./temp/'+id)
-     try {
-            let Pair_Code_By_Keith_Tech = Keith_Tech({
-                auth: {
-                    creds: state.creds,
-                    keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
-                },
-                printQRInTerminal: false,
-                logger: pino({level: "fatal"}).child({level: "fatal"}),
-                browser: ["Chrome (Linux)", "", ""]
-             });
-             if(!Pair_Code_By_Keith_Tech.authState.creds.registered) {
-                await delay(1500);
-                        num = num.replace(/[^0-9]/g,'');
-                            const code = await Pair_Code_By_Keith_Tech.requestPairingCode(num)
-                 if(!res.headersSent){
-                 await res.send({code});
-                     }
-                 }
-            Pair_Code_By_Gifted_Tech.ev.on('creds.update', saveCreds)
-            Pair_Code_By_Gifted_Tech.ev.on("connection.update", async (s) => {
-                const {
-                    connection,
-                    lastDisconnect
-                } = s;
-                if (connection == "open") {
-                await delay(5000);
-                let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
-                await delay(800);
-               let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Keith_Tech.sendMessage(Pair_Code_By_Keith_Tech.user.id, { text: '' + b64data });
+	const id = makeid();
+	async function IBRAHIM_TECH_QR_CODE() {
+		const {
+			state,
+			saveCreds
+		} = await useMultiFileAuthState('./temp/' + id)
+		try {
+			let Qr_Code_By_Ibrahim_Tech= Ibrahim_Tech({
+				auth: state,
+				printQRInTerminal: false,
+				logger: pino({
+					level: "silent"
+				}),
+				browser: Browsers.macOS("Desktop"),
+			});
 
-               let KEITH_MD_TEXT = `
+			Qr_Code_By_Ibrahim_Tech.ev.on('creds.update', saveCreds)
+			Qr_Code_By_Ibrahim_Techr.ev.on("connection.update", async (s) => {
+				const {
+					connection,
+					lastDisconnect,
+					qr
+				} = s;
+				if (qr) await res.end(await QRCode.toBuffer(qr));
+				if (connection == "open") {
+					await delay(5000);
+					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
+					await delay(800);
+				   let b64data = Buffer.from(data).toString('base64');
+				   let session = await Qr_Code_By_Ibrahim_King.sendMessage(Qr_Code_By_Ibrahim_King.user.id, { text: '' + b64data });
+	
+				   let KEITH_MD_TEXT = `
 *_Pair Code Connected by Keith Tech_*
 *_Made With 🤍_*
 ______________________________________
@@ -74,27 +76,31 @@ ______________________________________
 ║❒ *Plugins:* _https://github.com/keithkeizzah/keith-bot-md-plugins_
 ╚══════════════════════╝ 
 _____________________________________
-
+_____________________________________
+	
 _Don't Forget To Give Star To My Repo_`
- await Pair_Code_By_Keith_Tech.sendMessage(Pair_Code_By_Keith_Tech.user.id,{text:KEITH_MD_TEXT},{quoted:session})
- 
+	 await Qr_Code_Ibrahim_King.sendMessage(Qr_Code__Ibrahim_King.user.id,{text:IBRAHIM_TECH_TEXT},{quoted:session})
 
-        await delay(100);
-        await Pair_Code_By_Keith_Tech.ws.close();
-        return await removeFile('./temp/'+id);
-            } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
-                    await delay(10000);
-                    KEITH_MD_PAIR_CODE();
-                }
-            });
-        } catch (err) {
-            console.log("service restated");
-            await removeFile('./temp/'+id);
-         if(!res.headersSent){
-            await res.send({code:"Service Unavailable"});
-         }
-        }
-    }
-    return await KEITH_MD_PAIR_CODE()
+
+
+					await delay(100);
+					await Qr_Code__Ibrahim_King.ws.close();
+					return await removeFile("temp/" + id);
+				} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
+					await delay(10000);
+					FLASH_MD_QR_CODE();
+				}
+			});
+		} catch (err) {
+			if (!res.headersSent) {
+				await res.json({
+					code: "Service is Currently Unavailable"
+				});
+			}
+			console.log(err);
+			await removeFile("temp/" + id);
+		}
+	}
+	return await IBRAHIM_TECH_QR_CODE()
 });
 module.exports = router
